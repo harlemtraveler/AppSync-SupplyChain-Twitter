@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/harlemtraveler/AppSync-SupplyChain-Twitter#readme",
   "devDependencies": {
-    "serverless": "^2.4.0",
+    "serverless": "2.4.0",
     "serverless-appsync-plugin": "^1.12.1"
   }
 }
