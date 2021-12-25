@@ -4,6 +4,7 @@ frameworkVersion: '2'
 plugins:
   - serverless-appsync-plugin
   - serverless-iam-roles-per-function
+  - serverless-export-env
 
 provider:
   name: aws
@@ -106,5 +107,8 @@ resources:
         PreventUserExistenceErrors: ENABLED
 
   Outputs:
+    AwsRegion:
+      Value: ${self:custom.region}
+
      CognitoUserPoolId:
        Value: !Ref CognitoUserPool

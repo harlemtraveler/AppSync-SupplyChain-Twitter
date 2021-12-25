@@ -5,7 +5,9 @@
   "description": "A demo project based off a Twitter architecture meant to serve as the scaffolding for a Supply Chain Management service using the same technologies.",
   "main": "index.js",
   "scripts": {
-    "sls": "sls"
+    "sls": "sls",
+    "exportEnv": "sls export-env",
+    "integration-test": "jest --verbose ./__tests__/test_cases/integration"
   },
   "repository": {
     "type": "git",
@@ -20,8 +22,10 @@
   "homepage": "https://github.com/harlemtraveler/AppSync-SupplyChain-Twitter#readme",
   "devDependencies": {
     "aws-sdk": "^2.1048.0",
+    "jest": "^27.4.5",
     "serverless": "2.4.0",
     "serverless-appsync-plugin": "^1.12.1",
+    "serverless-export-env": "^2.0.0",
     "serverless-iam-roles-per-function": "^3.2.0"
   },
   "dependencies": {
