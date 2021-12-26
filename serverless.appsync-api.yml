@@ -19,4 +19,4 @@ dataSources:
   - type: AMAZON_DYNAMODB
     name: usersTable
     config:
-      tableName: !ref UsersTable
+      tableName: !Ref UsersTable
