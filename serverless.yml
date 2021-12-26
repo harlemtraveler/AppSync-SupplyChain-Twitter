@@ -110,5 +110,8 @@ resources:
     AwsRegion:
       Value: ${self:custom.region}
 
-     CognitoUserPoolId:
+    CognitoUserPoolId:
        Value: !Ref CognitoUserPool
+
+    WebCognitoUserPoolClientId:
+      Value: !Ref WebUserPoolClient
