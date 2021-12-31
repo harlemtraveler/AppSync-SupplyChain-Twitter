@@ -109,19 +109,19 @@ resources:
           - AttributeName: creator
             AttributeType: S
         GlobalSecondaryIndexes:
-          - IndexName: byScreenName
+          - IndexName: byCreator
             KeySchema:
-              - AttributeName: screenName
+              - AttributeName: creator
                 KeyType: HASH
+              - AttributeName: id
+                KeyType: RANGE
             Projection:
               ProjectionType: ALL
-        StreamSpecification:
-          StreamViewType: NEW_AND_OLD_IMAGES
         Tags:
           - Key: Environment
             Value: ${self:custom.stage}
           - Key: Name
-            Value: users-table
+            Value: tweets-table
 
     TimelinesTable:
       Type: AWS::DynamoDB::Table
