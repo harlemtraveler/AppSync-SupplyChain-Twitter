@@ -49,6 +49,7 @@ functions:
         Action:
           - s3:PutObject
           - s3:PutObjectAcl
+          - s3:PutAccelerateConfiguration
         Resource: !Sub ${AssetsBucket.Arn}/*
 
 resources:

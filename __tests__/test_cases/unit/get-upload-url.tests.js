@@ -15,7 +15,9 @@ describe('When getImageUploadUrl runs', () => {
 
         const { BUCKET_NAME } = process.env;
 
-        const regex = new RegExp(`https://${BUCKET_NAME}.s3-accelerate.amazonaws.com/${username}/.*${extension || ''}\?.*Content-Type=${contentType ? contentType.replace('/', '%2F') : 'image%2Fjpeg'}.*`);
+        // const regex = new RegExp(`https://${BUCKET_NAME}.s3-accelerate.amazonaws.com/${username}/.*${extension || ''}\?.*Content-Type=${contentType ? contentType.replace('/', '%2F') : 'image%2Fjpeg'}.*`);
+        // TODO: re-format the S3 bucket uri by removing the "-accelerate" key
+        const regex = new RegExp(`https://${BUCKET_NAME}.s3.amazonaws.com/${username}/.*${extension || ''}\?.*Content-Type=${contentType ? contentType.replace('/', '%2F') : 'image%2Fjpeg'}.*`);
         expect(signedUrl).toMatch(regex)
     })
 })

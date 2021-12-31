@@ -1,5 +1,7 @@
 const S3 = require('aws-sdk/clients/s3');
-const s3 = new S3({ useAccelerateEndpoint: true });
+// const s3 = new S3({ useAccelerateEndpoint: true });
+// TODO: disabled the "useAccelerateEndpoint" config
+const s3 = new S3({ useAccelerateEndpoint: false });
 const ulid = require('ulid');
 
 const { BUCKET_NAME } = process.env;
